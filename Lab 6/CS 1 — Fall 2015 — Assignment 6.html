@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0082)https://courses.caltech.edu/pluginfile.php/112561/mod_resource/content/2/lab6.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CS 1 — Fall 2015 — Assignment 6</title>
+<style type="text/css"> 
+.centered { text-align: center }
+blockquote {
+  margin: 1em 1em;
+  background-color: #d0d0d0;
+  border: 2px solid #000;
+  padding: 0em 1em;
+}
+pre           { color: #0000bb }
+code          { color: #0000bb }
+div.solution  { color: #006644 }
+code.solution { color: #006644 }
+pre.solution  { color: #006644 }
+p.solution    { color: #006644 }
+b.solution    { color: #006644 }
+h3.solution   { color: #006644 }
+h3.warning    { color: #ff0000 }
+p.warning     { color: #ff0000 }
+h3.gradingNotes  { color: #008090 }
+div.gradingNotes { color: #0080a0 }
+span.interact { color: #007700 }
+</style>
+<style type="text/css"></style></head>
+<body data-pinterest-extension-installed="cr1.39.1">
+<div class="centered">
+<h1>CS 1: Introduction To Computer Programming, Fall 2015</h1>
+<h2>Assignment 6: The Cheese Shop</h2>
+<p><b>Due:</b> <em>Tuesday, December 1, 02:00:00</em></p>
+</div>
+<hr width="75%">
+<h2>Coverage</h2>
+<p>This assignment covers the material up to lecture 18.</p>
+
+<hr>
+<h2><strong>Note on Thanksgiving</strong></h2>
+<p>According to the usual schedule, this assignment would be due on Thanksgiving
+day at 2 AM, which won't work for obvious reasons.  We also realize that many
+(most?) of you will be flying out for Thanksgiving early and/or will be
+otherwise occupied during this time.  Therefore, the actual due date is 2 AM on
+Tuesday (December 1).  This does not mean that assignment 7 will be pushed back
+until the following Tuesday, instead, it will be due on Friday, December 4th at
+2 AM.  So we very strongly suggest that you get started early on this
+assignment!  In recognition of the holiday, this assignment is a bit shorter
+than most.</p>
+<hr>
+<h2>What to hand in</h2>
+<p>You will be handing in two files for this assignment.</p><p>You should collect the answers to section B into a file called <code>lab6_b.py</code>.</p><p>For section D, you should hand in the file <code>lab6_d.py</code> containing your
+program.</p><p>Both files of your code should be handed in to <a href="http://csman.cs.caltech.edu/">csman</a>
+as usual.</p>
+<hr>
+<h2>Part A: Installing new Python packages</h2>
+<p>There are no new Python packages that you need to install for this week's
+assignment.</p>
+<hr>
+<h2>Part B: Exercises: Code Golf</h2>
+<p>There is a game that programmers sometimes play called "code golf".  The idea
+of code golf is to come up with a solution to a programming problem in the
+smallest number of characters in the source code.  In addition to being fun, it
+also forces you to learn more concise ways to write code than you might already
+know.</p><p>When grading your assignments and the midterm, we often notice that many
+students write code that is correct but which is far from the most concise or
+natural way to do it.  Therefore, in this section, we will be challenging you to
+write some extremely simple Python expressions or functions in a very small
+amount of code.  The idea is not to remove all whitespace (spaces, tabs, or
+newlines) or comments (those don't count), but to write the answers using the
+tools that Python already gives you in a concise way.</p><p>None of these questions should take you more than a minute, not counting the
+time you might need to look up some things in the Python documentation!</p><p>We will use the expression "limit X characters" to mean "you can use at most
+X non-whitespace characters in your solution".  Remember, whitespace characters
+(blanks, tabs, newlines) don't count towards the total character count!</p><ol>
+
+<li>
+
+<p>Write a single line of Python code that will print a blank line to the
+terminal.  Limit 5 characters.</p>
+
+
+
+
+</li>
+
+<li>
+
+<p>You have a variable <code>x</code> which contains a number.  Write a line of Python
+code which will add 10 to it.  Limit 5 characters.</p>
+
+
+
+
+</li>
+
+<li>
+
+<p>You have a variable <code>los</code> which contains a list of strings.  You want to
+join them (<em>hint, hint</em>) into a single string, with each string separated from
+the next in the list by a single space character.  Write a Python expression
+that will do this by calling a single method on strings.  Limit 15 characters
+(you actually need less than this).  One character will have to be a space, of
+course.</p>
+
+
+
+
+</li>
+
+<li>
+
+<p>Same as the previous question, but now the strings aren't separated by
+spaces (or anything else).</p>
+
+
+
+
+</li>
+
+<li>
+
+<p>Same as the previous question, but now the strings are separated by newlines
+(one newline character between each string and the next).</p>
+
+
+
+
+</li>
+
+<li>
+
+<p>You have a list <code>lst</code>.  Use it to create a list <code>lst2</code> which is equal to
+the first 5 elements of the list <code>lst</code>.  Limit 12 characters.  Assume that
+<code>lst</code> has at least 5 elements.</p>
+
+
+
+
+</li>
+
+<li>
+
+<p>Write a boolean expression (<em>i.e.</em> an expression evaluating to <code>True</code> or
+<code>False</code>) that tests whether a variable containing a python string is a vowel
+<em>i.e.</em> one of the letters 'a', 'e', 'i', 'o', or 'u'.  Assume that the
+variable's name is <code>x</code> and that the string it contains is one character in
+length.  Limit 10 characters.  <em>Hint:</em> use the <code>in</code> operator.</p>
+
+
+
+
+</li>
+
+<li>
+
+<p>You have a variable <code>grid</code> that contains a list of lists of integers (also
+known as a two-dimensional list).  In other words, <code>grid</code> is a list whose
+elements are also lists (of integers).  Write a Python expression that will
+retrieve the first element of the first list in <code>grid</code> (which you can assume
+exists) and assign it to the variable <code>first</code>.  Limit 20 characters (you
+actually need less than this).</p>
+
+
+
+
+</li>
+
+<li>
+
+<p>Following up from the last question, write a Python expression that will
+assign the number <code>42</code> to the first element of the first list in <code>grid</code> (which
+you can assume exists).  Limit 15 characters (you actually need less than
+this).</p>
+
+
+
+
+</li>
+
+<li>
+
+<p>Assume you have an open file object called <code>f</code> which corresponds to a text
+file on your computer.  Write two very short lines of Python code to read all
+the lines of the file, capitalize them, and print them out to the terminal.
+Make sure you don't add any extra newlines to the output!  Limit 20 characters
+per line.  Do not use the <code>readlines</code> method on files.  You don't have to close
+the file when you're done (at least, not for this problem; in reality you would
+want to do that).</p>
+
+
+
+
+</li>
+
+<li>
+
+<p>Assume you have a variable called <code>s</code> which contains a lowercase string.
+Write Python code which, when executed, changes <code>s</code> so that it's now uppercase
+and in reversed order.  This can be done in one line, but we will allow you
+three lines, as long as each line is no more than 20 non-whitespace characters
+long.  Do not use any <code>if</code> statements or loops; just function calls, method
+calls, and assignments. <em>Hint:</em> method calls can be chained.</p>
+
+<p><b>BONUS HONOR ROLL CREDIT!</b>  If you can do it in a single line of no more
+than 40 non-whitespace characters, you get 2 Honor Roll points.  To do this you
+will probably need to use Python functions/methods that we haven't covered in
+class, which is OK, but they must be built-in ones (<em>i.e.</em> you don't have to
+<code>import</code> any modules to solve this problem).  Again, no loops or <code>if</code>
+statements are allowed.  If you do it in more than 40 non-whitespace characters
+but less than 64, you get 1 Honor Roll point.</p>
+
+
+
+
+</li>
+
+</ol>
+<hr>
+<h2>Part C: Pitfalls</h2>
+<p>There is no pitfalls section in this assignment.</p>
+<hr>
+<h2>Part D: Miniproject: Bouncing ball animations</h2>
+<p>For this week's project, you're going to write a program which represents a
+very simple physical simulation: balls bouncing around inside a box.  This will
+not be a completely realistic simulation; specifically:</p><ul>
+<li>the simulated world will be two-dimensional</li>
+<li>there will be no gravity</li>
+<li>balls will not interact with each other</li>
+</ul><p>What the simulation will do is represent circular objects (which we'll call
+"balls", though "circles" would be more accurate) which move around inside a
+two-dimensional <code>Tkinter</code> canvas.  When they hit a "wall" (one of the edges of
+the canvas), they will bounce back in an appropriate way.  It will also be
+possible to create new balls and destroy existing ones, as well as to speed up
+or slow down the entire set of bouncing balls.  If you think of the balls as gas
+molecules, this can be viewed as changing the temperature of the gas.
+(Physicists and chemists describe this kind of simulation as an "ideal gas",
+which means that the individual gas molecules don't interact with each other.)
+Mostly, though, this miniproject is a good example of a graphical program which
+can simultaneously do something to graphical objects without user interaction as
+well as handle user events.  In order to do this, we will have to have a
+different kind of event loop than we have been using so far.</p><p>Before you begin, please read this entire section carefully.  This project
+does not require that you write a lot of code, but there are a number of
+interesting ideas that will take a while to explain.  Don't let the length of
+this section scare you!  Once you understand what you need to do, writing the
+code won't be too hard, and the resulting program will be very cool.  Also note
+that there is a <a href="https://courses.caltech.edu/pluginfile.php/112561/mod_resource/content/2/BouncingBalls.py">template code file</a> which contains much
+of the code for the project; you just have to add a few parts (the interesting
+parts!).  There's more on the template file below.</p>
+<h3>Background information</h3>
+<p>In order to do this miniproject you need to know a bit more about how
+<code>Tkinter</code> works.  This section will give you the necessary information.</p>
+<h4>More on event loops</h4>
+<p>In the lectures we have seen that to start the event loop in a Python program
+that uses <code>Tkinter</code>, we use the <code>mainloop</code> method of the root window.  So in
+our code there will usually be a line like:</p><pre><code>root.mainloop()
+</code></pre><p>This will start up the event loop.  This is perfectly adequate for a program
+which is purely event-driven <em>i.e.</em> a program which does nothing except in
+response to user input.  However, programs that simulate a virtual world (which
+includes many simulations and most video games) must not only listen for user
+events and handle them once they occur, but must also simulate the evolution
+through time of the virtual world even if no events occur.  This kind of program
+needs a more powerful way of handling events than just calling
+<code>root.mainloop()</code>.  Specifically, the event loop will have to be broken down
+into two components:</p><ul>
+
+<li>evolve the virtual world over some time period</li>
+
+<li>handle any user events (<em>e.g.</em> key presses, mouse clicks) that occurred
+during that time period.</li>
+
+</ul><p>Fortunately, <code>Tkinter</code> allows us to create such an event loop quite easily.
+To see how this works, let's look at the line:</p><pre><code>root.mainloop()
+</code></pre><p>This can also be written as:</p><pre><code>while True:
+    root.update()
+</code></pre><p>The <code>update</code> method on the <code>root</code> object handles all events that have
+happened since the last time the <code>update</code> method was called on that object.
+Some of these events may be bound to callback functions using the <code>bind</code> method
+we've seen before, in which case the callback functions will be called during
+the <code>update</code>.</p><p>OK, so we can write <code>root.mainloop()</code> in a different way with an explicit
+<code>while</code> loop.  So what?  The advantage of this is that we can put other
+function calls inside the <code>while</code> loop.  If we have a simulation that needs to
+evolve at regular intervals, we can do that evolving inside the <code>while</code> loop
+and also listen for user events at the same time.  If one step of our simulation
+happens when we call a function called <code>step()</code>, we can write:</p><pre><code>while True:
+    step()          # evolve the simulation one step
+    root.update()   # handle user events, if any
+</code></pre><p>This is a much more versatile way to write graphical programs, as we will
+see.  Typically, one "step" corresponds to a very small time interval, where the
+objects being simulated move only a very small amount.  When a bunch of steps
+occur one after another, the objects will appear to move on the canvas; this is
+how animations are programmed.</p><p>Not only that, but it's also very easy to halt the simulation.  All we need
+to do is define a variable called <code>done</code> (this might be a global variable), and
+rewrite the event loop as follows:</p><pre><code>done = False
+while not done:
+    step()          # evolve the simulation one step
+    root.update()   # handle user events, if any
+</code></pre><p>This simulation will continue until <code>done</code> is <code>True</code>, at which point it
+will halt (because <code>not done</code> will be <code>False</code>, which ends the <code>while</code> loop).
+For this to work, one of the callback functions must change the value of <code>done</code>
+from <code>False</code> to <code>True</code>.  When you write the event loop this way, there is no
+need to call <code>quit()</code> to terminate the simulation.</p>
+<h4>New canvas methods</h4>
+<p>You will need to know about the canvas <code>move</code>, <code>delete</code> and <code>cget</code>
+methods.  The <code>move</code> and <code>delete</code> methods were described in the lectures, but
+we'll describe them again here.</p><p>For a given canvas object handle <code>h</code>, a call to the <code>move</code> method would
+look like this:</p><pre><code>canvas.move(h, 10, 20)
+</code></pre><p>What this will do is to change the location of the object on the canvas
+represented by the handle <code>h</code>.  It will increase the <code>x</code> position by 10 pixels
+and it will increase the <code>y</code> position by 20 pixels.  So if the center of the
+object was at <code>(100, 150)</code> before this method call, afterwards it will be
+centered at <code>(110, 170)</code>.  The <code>move</code> method can also be given negative <code>x</code>
+and/or <code>y</code> values.</p><p>The <code>delete</code> method takes a handle as its argument and removes the
+corresponding object from the canvas.</p><p>The <code>cget</code> method takes a string which describes some feature of the canvas
+and returns its value.  For instance, you can get the height of a canvas as:</p><pre><code>canvas.cget('height')
+</code></pre><p>and the width as:</p><pre><code>canvas.cget('width')
+</code></pre><p>Note that this is another way in which <code>Tkinter</code> is not particularly
+object-oriented; a more object-oriented way of getting this would be to have
+attributes called <code>canvas.height</code> or <code>canvas.width</code>, but those attributes
+unfortunately don't exist.</p>
+<h3>The program</h3>
+<ol>
+
+<li>
+
+<p><strong>[120]</strong>  Write a bouncing ball simulator.  This program will put some
+number of colored circles ("balls") on a <code>Tkinter</code> canvas, each one moving in a
+particular direction with a particular speed.  When one of the balls hits one of
+the edges of the canvas, it will bounce off the edge and continue moving at the
+same speed but in a different direction (reflecting off the edge).  Balls do not
+interact with one another (they can pass through each other).  In addition, the
+program will respond to certain key press events as follows:</p>
+
+<ol>
+
+<li>When the user presses the <code>q</code> key, the program will exit (<code>q</code> stands for
+"quit").</li>
+
+<li>When the user presses the <code>x</code> key, all the circles are cleared from the
+screen.  This means that every time a circle is created, the handle that is
+returned must be stored somewhere.</li>
+
+<li>When the user presses the <code>+</code> key, an additional ball with a random color and
+size will be created and placed on the canvas in a random location.  The entire
+ball must fit onto the canvas; no part of the ball is allowed to run off the
+edge of the canvas at any point.</li>
+
+<li>When the user presses the <code>-</code> key, one of the balls on the canvas will be
+removed (it doesn't matter which one).</li>
+
+<li>When the user presses the <code>u</code> key, all the balls will speed up (u for "up")
+by a factor of 1.2.</li>
+
+<li>When the user presses the <code>d</code> key, all the balls will slow down (d for
+"down") by a factor of 1.2.</li>
+
+</ol>
+
+<p>Each ball will be an instance of a class called <code>BouncingBall</code>.  Each ball
+object will store:</p>
+
+<ul>
+<li>the canvas it was created on</li>
+<li>its handle on the canvas</li>
+<li>its center coordinates (in pixels)</li>
+<li>its radius (in pixels)</li>
+<li>its color (as a color string like in assignment 5)</li>
+<li>the direction it is moving in (see below)</li>
+<li>its speed (see below)</li>
+</ul>
+
+<p><code>BouncingBall</code> objects must implement the following methods in addition to
+the constructor method:</p>
+
+<ol>
+<li><code>step</code>: this moves the ball the distance it would travel during one
+step of the simulation, bouncing it off the edges if necessary</li>
+<li><code>scale_speed</code>: this scales the speed of the ball by some factor</li>
+<li><code>delete</code>: this just deletes the ball from the canvas</li>
+</ol>
+
+<p>In addition, a method called <code>displacement</code>, though not technically
+essential, will be very convenient.  See the following section for details.</p>
+
+</li>
+
+</ol>
+<h3>Notes and hints</h3>
+
+<h4>Template code</h4>
+<p>We are providing you with a template file containing some of the code you'll
+need for this problem.  It's located <a href="https://courses.caltech.edu/pluginfile.php/112561/mod_resource/content/2/BouncingBalls.py">here</a>.  You should
+edit it by filling in your code at the locations marked by <code># TODO</code> comments.
+(The <code># TODO</code> comments should be removed; they are just placeholders and should
+not be in your final submission.)</p><p>Notice that the <code>BouncingBall</code> constructor is provided for you.  The
+<code>create_oval</code> method of canvases is used to create the circle which represents
+the bouncing ball.  The <code>delete</code> method is also provided for you.  The other
+methods need to be written, and the <code>random_ball</code> and <code>key_handler</code> functions
+need to be completed.</p><p>Although this miniproject requires a lot of explanation, there really isn't
+that much code to write (about 50 extra lines in our version).</p>
+<h4>Velocity, speed and direction</h4>
+<p>Conceptually, the velocity of the ball is an example of a mathematical
+<em>vector</em>, which means that it has a magnitude and a direction.  The magnitude
+is called the <em>speed</em> and is represented as a floating point number which (when
+rounded to an integer) is the number of pixels the ball moves in the direction
+of motion each step of the simulation.  This speed value should be positive and
+is stored as an attribute of the object.  The direction a ball is moving is
+given to the constructor as the angle between the ball's direction of movement
+and the direction of the positive <code>x</code> axis (going counterclockwise from the
+positive <code>x</code> direction).  This angle is expressed in degrees, and should be
+between 0.0 and 360.0 degrees.  Inside the constructor, this angle is converted
+into radians, which are more convenient for calculations than degrees.  The
+equation relating them is:</p><pre><code>angle_radians = angle_degrees * pi / 180.0
+</code></pre><p>Once we have the angle in radians, we can decompose the velocity vector into
+its <code>x</code> and <code>y</code> components using these equations:</p><pre><code>vx = speed * cos(angle_radians)
+vy = -speed * sin(angle_radians)
+</code></pre><p>Note that Python assumes that arguments to the <code>sin</code> and <code>cos</code> functions
+are in radians.  The equations for <code>vx</code> and <code>vy</code> are the standard formulas for
+converting between polar coordinates and rectangular coordinates (we saw this
+last assignment), with one exception.  The <code>vy</code> value must be negated because
+the <code>y</code> coordinate on the screen grows downward, not upward as it does in
+standard mathematical coordinate systems.</p><p>Since the speed of the ball will be changeable, it's more convenient to store
+direction coordinates as follows:</p><pre><code>dirx = cos(angle_radians)
+diry = -sin(angle_radians)
+</code></pre><p>and then define:</p><pre><code>vx = speed * dirx
+vy = speed * diry
+</code></pre><p>as needed.  These velocity coordinates represent the distance the ball moves
+in the <code>x</code> and <code>y</code> directions in a single step of the simulation, assuming
+that the ball doesn't collide with one of the edges of the canvas.</p><p>To give you some intuition for what directions mean, here are some direction
+angles along with their meanings:</p><ul>
+
+<li>0 degrees means that the ball is moving in the positive <code>x</code> direction
+<em>i.e.</em> to the right.</li>
+
+<li>180 degrees means that the ball is moving to the left.</li>
+
+<li>90 degrees means that the ball is moving in the negative <code>y</code> direction
+<em>i.e.</em> upwards (towards the top of the computer screen).</li>
+
+<li>270 degrees means that the ball is moving downwards.</li>
+
+<li>45 degrees means that the ball is moving diagonally towards the upper right
+at a 45 degree angle.</li>
+
+<li>315 degrees (360 - 45) means that the ball is moving diagonally towards the
+lower right at a 45 degree angle.</li>
+
+</ul>
+<h4>Moving the ball</h4>
+<p>Every time the <code>step</code> method of a <code>BouncingBall</code> object is called, the ball
+has to be moved on the canvas.  This will be done in the <code>step</code> method of the
+ball.  The key to accomplishing this is to compute the distance in pixels the
+ball has to move in the <code>x</code> and <code>y</code> directions.  In order to compute this, you
+need to know:</p><ol>
+<li>the position of the center of the ball (an (<code>x</code>, <code>y</code>) pair)</li>
+<li>the radius of the ball</li>
+<li>the direction the ball is moving</li>
+<li>the speed of the ball</li>
+<li>the dimensions of the canvas</li>
+</ol><p>Moving a ball is easy if it doesn't collide with the edges of the canvas.
+All you need to do is compute <code>vx</code> and <code>vy</code> as described above, which will
+give you the pixels moved in the <code>x</code> and <code>y</code> directions in one step (note that
+pixel coordinates should always be rounded off to the nearest integer value, as
+fractional pixels are meaningless).  Then you just call the <code>move</code> method on
+the canvas to move the ball, updating the <code>center</code> attribute of the ball in the
+process.</p><p>The tricky part is handling collisions with the edges correctly.  If the
+outer edge of the ball touches the edge of the canvas, that's a collision.
+Furthermore, a collision can occur with one edge only or with two edges
+simultaneously (a corner collision).  The easiest way to deal with this is to
+treat the <code>x</code> and <code>y</code> coordinates separately.  A collision in the <code>x</code>
+direction occurs when either:</p><ol>
+
+<li>the <code>x</code> position of the center of the ball before this step, plus the change
+in the <code>x</code> position during this step, plus the radius of the ball is greater
+than the width of the canvas.</li>
+
+<li>the <code>x</code> position of the center of the ball before this step, plus the change
+in the <code>x</code> position during this step, minus the radius of the ball is less than
+zero.</li>
+
+</ol><p>A similar situation occurs in the <code>y</code> direction, except that instead of the
+width of the canvas, the ball must not go past the height of the canvas in the
+<code>y</code> direction.</p><p>If you know that a collision in a particular direction is going to happen
+this step, instead of moving the ball as far in that direction as you were
+planning to, you must instead:</p><ol>
+
+<li>figure out how far in that direction you would overshoot the edge if you moved
+it as far as you were going to</li>
+
+<li>move the ball up to the point where it's just touching the edge</li>
+
+<li>reverse the direction of the ball in that coordinate</li>
+
+<li>move it the rest of the way with the new direction</li>
+
+<li>adjust the velocity of the ball to take the collision into account</li>
+
+</ol><p>This sounds complicated, but it's actually quite simple, and an example will
+show you what we mean.  Let's assume that the canvas has the dimensions 800x600
+(800 pixels wide, 600 pixels high).  There is a red ball centered at (740, 300)
+with a radius of 50 pixels, moving diagonally to the lower right at a speed of
+20 pixels/step.  The direction angle is 315 degrees (equivalent to -45 degrees).
+We want to compute where it will be after a single step.  We can compute the
+<code>vx</code> and <code>vy</code> values as follows:</p><pre><code>vx = speed * cos(315 degrees) = 20 * 0.7071 = 14.14 pixels
+  (round to 14 pixels)
+vy = -speed * sin(315 degrees) = -20 * (-0.7071) = 14.14 pixels
+  (round to 14 pixels)
+# N.B. Recall that Python uses radians, not degrees, as arguments to sin and cos.
+</code></pre><p>So if we ignored collisions, the center of the ball would move to (754, 314)
+in this time step.  Unfortunately, this would put the right edge of the ball at
+804 pixels, 4 pixels over the edge.  This means that a collision with the right
+edge of the canvas will occur in this time step, and the ball has to bounce off
+of the edge.  What we need to do is figure out where it will be after bouncing
+off the edge, and what its new velocity will be.  Specifically, we need to
+figure out how far to move the ball in the <code>x</code> and <code>y</code> directions. The good
+news is that there is no collision in the <code>y</code> direction.  Because of this, the
+ball will move the full 14 pixels in that direction.  In the <code>x</code> direction, the
+ball will first move as far as it can (10 pixels until the ball is just touching
+the edge).  This leaves 4 pixels, so the ball will reverse direction with
+respect to the <code>x</code> coordinate and will move the remaining 4 pixels in the
+opposite direction, giving a total movement in the <code>x</code> direction of 10 - 4 = 6
+pixels.  So the center of the ball will move to (740 + 6, 300 + 14) = (746,
+314), and the ball will now be moving in a different direction (with the <code>x</code>
+coordinate of the direction reversed but the <code>y</code> coordinate the same, which
+leaves the ball heading towards the lower left corner).</p><p>If we use <code>dirx</code> and <code>diry</code> to store the coordinates of the direction as
+described above, the effect of a collision on the <code>x</code> direction is to negate
+the value of <code>dirx</code>, and the effect of a collision on the <code>y</code> direction is to
+negate the value of <code>diry</code>.  Don't forget to do this!</p><p>Here's a tip: the displacement of the ball can be computed independently for
+the <code>x</code> and <code>y</code> dimensions, including the effects of collisions.  In the
+template code, this is done in the <code>displacement</code> method, which takes the
+center coordinate (<code>x</code> or <code>y</code>, but not both), the change in that direction
+(assuming no collisions), and the limit in that direction (the width of the
+canvas for the <code>x</code> direction and the height for the <code>y</code> direction), and
+computes and returns the actual displacement in that direction, taking
+collisions into account.  The radius is also needed in this method but it can be
+accessed through the <code>self</code> argument, since it's an attribute of the object.
+The <code>displacement</code> method can be called from the <code>step</code> method to compute the
+correct displacement in either dimension, and if it's different from the
+expected displacement, a collision must have occurred, which means that the
+direction of movement must be adjusted accordingly.</p><p>An example of how <code>displacement</code> could be used in the previous example:</p><pre><code># center of ball: (740, 300)
+# velocity: 20 pixels/second to the lower right
+# vx = 14.14 pixels/second, round to 14
+# vy = 14.14 pixels/second, round to 14
+# dimensions of canvas: 800x600
+
+# In the step() method, we'd compute:
+dx = self.displacement(740, 14, 800)
+dy = self.displacement(300, 14, 600)
+
+# Note: numbers given (740, 300, 800, 600, 14) would in the real code
+# be replaced by variable names or object attribute names.
+
+# Results:
+# dx = 6  (bounces off wall, different from vy)
+# dy = 14 (no bounce, same as vy)
+</code></pre><p>Whew!  This took a long time to explain, but we hope that you find the
+process of writing the program interesting, and the results entertaining.</p>
+
+<hr>
+<font size="-1">Copyright (c) 2015, California Institute of
+  Technology. All rights reserved.<br>
+</font>
+
+
+
+</body></html>

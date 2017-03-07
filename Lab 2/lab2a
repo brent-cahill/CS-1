@@ -1,0 +1,183 @@
+import random
+# Ex B.1:
+def complement(a):
+    """
+    Returns the "complement" of a letter DNA sequence. Takes an argument
+    a, which should be a string. The output represents the DNA nucleotide
+    complement of any DNA sequence
+    """
+    comp = ''
+    for w in a:
+        if w == 'A':
+            comp += 'T'
+        elif w == 'T':
+            comp += 'A'
+        elif w == 'C':
+            comp += 'G'
+        elif w == 'G':
+            comp += 'C'
+        else:
+            comp += '[ This character was not an A, T, C, or G ]'
+    return comp
+
+# Ex B.2:
+def list_complement(b):
+    """
+    Changes the nucleotide of a list DNA sequence to its "complement." Takes an
+    argument b, which should be a list of strings. There is no output.
+    """
+    for w in range (len(b) - 1):
+        if b[w] == 'A':
+            b[w] = 'T'
+        elif b[w] == 'T':
+            b[w] = 'A'
+        elif b[w] == 'C':
+            b[w] = 'G'
+        elif b[w] == 'G':
+            b[w] = 'C'
+        else:
+            b[w] = '[ This character was not an A, T, C, or G ]'
+
+# Ex B.3:
+def product(c):
+    """
+    Returns the product of a list of numbers. Takes an argument c, which should
+    be a list of either integers or floating point numbers or a combination of
+    both
+    """
+    prod = 1.0
+    for p in c:
+        prod *= p
+    return prod
+
+# Ex. B.4:
+def factorial(d):
+    """
+    Returns the factorial of an integer argument d.
+    """
+    numList = []
+    if d == 0:
+        return 1
+    elif d == 1:
+        return 1
+    else:
+        for num in range (1, d + 1):
+            numList.append(num)
+    return int(product(numList))
+    
+# Ex. B.5:
+def dice(m, n):
+    """
+    Returns the sum of n number of pseudo-random dice rolls with dice with m
+    sides. Takes two integer arguments m and n, the number of sides on the die
+    and the number of times rolled, repectively.
+    """
+    numSum = 0
+    sideness = []
+    for i in range (1, m + 1):
+        sideness.append(i)
+    for roll in range(n):
+        numSum += random.choice(sideness)
+    return numSum
+
+# Ex. B.6:
+def remove_all(lst, value):
+    """
+    Removes all instances of an integer argument value from a list argument of
+    integers (lst) by using a while loop (counting the number of times the value
+    is in the list).
+    """
+    while lst.count(value) > 0:
+        lst.remove(value)
+        
+# Ex. B.7.1:
+def remove_all2(lst2, value2):
+    """
+    Removes all instances of an integer argument value from a list argument of
+    integers (lst) by using a for loop.
+    """
+    removeNum = lst2.count(value2)
+    for x in range(removeNum):
+        lst2.remove(value2)
+        
+# Ex. B.7.2:
+def remove_all3(lst3, value3):
+    """
+    Removes all instances of an integer argument value from a list argument of
+    integers (lst) by using a while loop (checking if the value is in the list).
+    """    
+    while value3 in lst3:
+        lst3.remove(value3)
+        
+# Ex. B.8:
+def any_in(check1, check2):
+    """
+    Checks if any value in one list is equal to any value in a second list.
+    Takes two arguments, check1 and check2, which should be lists. Returns a
+    boolean.
+    """
+    check = False
+    for x in check2:
+        for y in check1:
+            if y == x:
+                check = True
+    return check
+
+# Ex. C.1.a:
+# The "third" line of code does not check to see if a is 0, it is syntactically
+# incorrect. To check if a variable is equal to something, you must use a double
+# equals sign. the line of code would be correct if it read as:
+# if a == 0:
+
+# Ex. C.1.b:
+# The argument cannot have quotes around it. The argument can be a string, but
+# if cannot have quotes around it to indicate that.
+
+# Ex. C.1.c:
+# This will return 's-Caltech' everytime, rather than the actual string s with
+# '-Caltech' at the end, because there are quotes surrounding s in the return
+# statement.
+
+# Ex. C.1.d:
+# You cannot concatenate a string element to a list. In order to add a value to
+# to a list, you must use a method, namely list.append(x)
+
+# Ex. C.1.e:
+# You cannot return a list with a method on it. You need to seperate the last
+# line of code into two lines of code:
+# lst2.append(0)
+# return lst2
+
+# Ex. C.1.f:
+# You cannot convert a string to a list in that way (and you don't want to
+# convert the string to a list anyway, because then it will simply add a list as
+# an element to another list). letters = list(str) will
+# not work because a string is not callable. To fix this, you could instead
+# write:
+# letters = str
+# list.append(letters)
+
+# Ex. C.2:
+# the following code will print 30 instead of 50:
+# a = 10
+# b = 20
+# c = b + a
+# a = 30
+# print c
+# we will run through these lines of code step by step, as the computer would:
+# First, variable a is assigned a value 10.
+# Then, variable b is assigned a value of 20.
+# Next, variable c is assigned a value of b + a, which is 30.
+# Finally, variable a is assigned a value of 30.
+# We then print the value of c.
+# Note that a variable can only be assigned a value in the following syntax:
+# variable = value
+# So, since c is only assigned a value once (30), it can only print out 30.
+
+# Ex. C.3:
+# Printing a result (as in add_and_double_2(x, y, z)), would not work, because
+# it is used to simply print out the result of whatever is within the function
+# to the shell. It cannot be used as a value. When a result is returned, it is
+# treated as a value that can be operated on.
+
+# Ex. C.4:
